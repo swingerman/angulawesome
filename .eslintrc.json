@@ -1,0 +1,84 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "root": true,
+  "ignorePatterns": ["projects/**/*"],
+  "settings": {
+    "import/core-modules": ["rxjs/operators"]
+  },
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "project": ["tsconfig.*?.json"],
+        "createDefaultProgram": true
+      },
+      "plugins": ["prettier", "ngrx", "import"],
+      "extends": [
+        "plugin:@angular-eslint/ng-cli-compat",
+        "plugin:@angular-eslint/ng-cli-compat--formatting-add-on",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "airbnb-typescript/base",
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        "plugin:ngrx/recommended"
+      ],
+      "rules": {
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": ["app", "oog"],
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "style": "kebab-case"
+          }
+        ],
+        "import/no-named-default": "off",
+        "import/no-unresolved": "off",
+        "import/prefer-default-export": "off",
+        "class-methods-use-this": "off",
+        "lines-between-class-members": "off",
+        "semi": ["error", "always"],
+        "@typescript-eslint/explicit-module-boundary-types": ["error"],
+        "no-use-before-define": "off",
+        "rxjs/no-unsafe-catch": "off",
+        "rxjs/no-unsafe-first": "off",
+        "@typescript-eslint/no-use-before-define": [
+          "error",
+          {
+            "functions": false,
+            "classes": true
+          }
+        ],
+        "no-console": [
+          "warn",
+          {
+            "allow": ["warn", "error"]
+          }
+        ],
+        "no-underscore-dangle": [
+          "error",
+          {
+            "allowAfterThis": true
+          }
+        ],
+        "no-param-reassign": "off",
+        "prefer-destructuring": "off"
+      }
+    },
+    {
+      "files": ["*.html"],
+      "plugins": ["prettier"],
+      "extends": ["plugin:@angular-eslint/template/recommended"],
+      "rules": {
+        "@angular-eslint/template/no-negated-async": "off"
+      }
+    }
+  ]
+}

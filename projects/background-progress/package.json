@@ -1,0 +1,12 @@
+{
+  "name": "@angulawesome/background-progress",
+  "version": "0.1.0",
+  "private": false,
+  "peerDependencies": {
+    "@angular/common": "^12.2.0",
+    "@angular/core": "^12.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}
