@@ -1,24 +1,22 @@
-# BackgroundProgress
+![npm](https://img.shields.io/npm/dw/@swingerman/background-progress?label=dwonloads&logo=npm&style=for-the-badge) [![Donate](https://img.shields.io/badge/Donate-PayPal-yellowgreen?style=for-the-badge&logo=paypal)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=S6NC9BYVDDJMA&source=url)
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
+# Background Progress Directive
 
-## Code scaffolding
+A simple directive for Angular 12+ that renders a linear gradient background on the element simulating a simple progress bar.
 
-Run `ng generate component component-name --project background-progress` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project background-progress`.
-> Note: Don't forget to add `--project background-progress` or else it will be added to the default project in your `angular.json` file. 
+The idea was to use it on inputs but can be used for other elements as well.
 
-## Build
+### Properties
 
-Run `ng build background-progress` to build the project. The build artifacts will be stored in the `dist/` directory.
+| Name       | Description |
+|------------|-------------|
+| @Input() <br>backgroundColor: string | Sets the background color of the element             |
+| @Input() <br>foregroundColor: string | Sets the progress color                              |
+| @input() <br>fillPercentGap: number  | Sets the blur size at the edge of the progress color |
+| @input() <br>fillPercent: number     | Sets the actual percent                              |
 
-## Publishing
 
-After building your library with `ng build background-progress`, go to the dist folder `cd dist/background-progress` and run `npm publish`.
 
-## Running unit tests
 
-Run `ng test background-progress` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
